@@ -106,6 +106,40 @@ class _SaleNewsState extends State<SaleNews> {
             const SizedBox(
               height: 16,
             ),
+            // DefaultTabController(
+            //   length: 2,
+            //   child: Column(
+            //     children: [
+            //       TabBar(
+            //         tabs: [
+            //           Tab(
+            //             child: Text(
+            //               'Mua bán (5)',
+            //               style: TypeSet.sub14Medium.copyWith(
+            //                   color: Color(check ? 0xFF1570EF : 0xFF475467)),
+            //             ),
+            //           ),
+            //           Tab(
+            //             child: Text(
+            //               'Mua bán (3)',
+            //               style: TypeSet.sub14Medium.copyWith(
+            //                   color: Color(check ? 0xFF1570EF : 0xFF475467)),
+            //             ),
+            //           ),
+            //         ],
+            //       ),
+            //       const SizedBox(
+            //         height: 16,
+            //       ),
+            //       TabBarView(children: [
+            //         // ...state.posts.map((e) => PostCard(post: e)),
+            //         // ...state.posts.reversed.map((e) => PostCard(post: e)),
+            //         Icon(Icons.directions_car),
+            //         Icon(Icons.directions_transit),
+            //       ]),
+            //     ],
+            //   ),
+            // ),
             ...content,
           ],
         );
