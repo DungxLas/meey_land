@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:meey_land/constant/type_set.dart';
-import 'package:meey_land/sale/sale_details.dart';
-import 'package:meey_land/sale/sale_news.dart';
+import 'package:meey_land/sale/edit/sale_edit.dart';
+import 'package:meey_land/sale/info/sale_details.dart';
+import 'package:meey_land/sale/news/sale_news.dart';
 
 class SalePage extends StatelessWidget {
   const SalePage({super.key, required this.title});
@@ -58,183 +58,22 @@ class SalePage extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(16, 16, 16, 32),
                 child: Saledetails(),
               ),
-              // Container(
-              //   width: double.infinity,
-              //   padding: const EdgeInsets.all(16),
-              //   decoration: const BoxDecoration(
-              //     color: Colors.white,
-              //   ),
-              //   child: const SaleNews(
-              //     isListPost: true,
-              //   ),
-              // ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
+              const Padding(
+                padding: EdgeInsets.symmetric(
                   horizontal: 16,
-                  vertical: 0,
+                  vertical: 16,
                 ),
-                child: SizedBox(
-                  height: 269, // Chiều cao cố định cho vùng cuộn ngang
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        width: 224,
-                        height: 269,
-                        padding: const EdgeInsets.all(22),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const Text(
-                              'Xác minh môi giới',
-                              style: TypeSet.headline5,
-                            ),
-                            const SizedBox(height: 16),
-                            Image.asset(
-                              'lib/assets/images/trustworthiness.png',
-                              width: 65,
-                              height: 65,
-                            ),
-                            const Text(
-                              'Giúp tài khoản được bảo vệ và tăng độ uy tín',
-                              textAlign: TextAlign.center,
-                              style: TypeSet.body14Regular,
-                            ),
-                            const SizedBox(height: 8),
-                            ElevatedButton(
-                              onPressed: () {
-                                // Xử lý khi nhấn nút "Bắt đầu"
-                              },
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                backgroundColor: const Color(0xFF1570EF),
-                              ),
-                              child: Text(
-                                'Bắt đầu',
-                                style: TypeSet.sub16Medium.copyWith(
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: 224,
-                        height: 269,
-                        padding: const EdgeInsets.all(22),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const Text(
-                              'Xác minh môi giới',
-                              style: TypeSet.headline5,
-                            ),
-                            const SizedBox(height: 16),
-                            Image.asset(
-                              'lib/assets/images/trustworthiness.png',
-                              width: 65,
-                              height: 65,
-                            ),
-                            const Text(
-                              'Giúp tài khoản được bảo vệ và tăng độ uy tín',
-                              textAlign: TextAlign.center,
-                              style: TypeSet.body14Regular,
-                            ),
-                            const SizedBox(height: 8),
-                            ElevatedButton(
-                              onPressed: () {
-                                // Xử lý khi nhấn nút "Bắt đầu"
-                              },
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                backgroundColor: const Color(0xFF1570EF),
-                              ),
-                              child: Text(
-                                'Bắt đầu',
-                                style: TypeSet.sub16Medium.copyWith(
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: 224,
-                        height: 269,
-                        padding: const EdgeInsets.all(22),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const Text(
-                              'Xác minh môi giới',
-                              style: TypeSet.headline5,
-                            ),
-                            const SizedBox(height: 16),
-                            Image.asset(
-                              'lib/assets/images/trustworthiness.png',
-                              width: 65,
-                              height: 65,
-                            ),
-                            const Text(
-                              'Giúp tài khoản được bảo vệ và tăng độ uy tín',
-                              textAlign: TextAlign.center,
-                              style: TypeSet.body14Regular,
-                            ),
-                            const SizedBox(height: 8),
-                            ElevatedButton(
-                              onPressed: () {
-                                // Xử lý khi nhấn nút "Bắt đầu"
-                              },
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                backgroundColor: const Color(0xFF1570EF),
-                              ),
-                              child: Text(
-                                'Bắt đầu',
-                                style: TypeSet.sub16Medium.copyWith(
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+                child: SaleEdit(),
+              ),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(16),
+                decoration: const BoxDecoration(
+                  color: Colors.white,
                 ),
-                // ListView(
-                //   children: [
-                //     Container(
-                //       decoration: BoxDecoration(
-                //         borderRadius: BorderRadius.circular(8),
-                //         color: Colors.white,
-                //       ),
-                //       width: 224,
-                //       height: 269,
-                //     ),
-                //     Container()
-                //   ],
-                // ),
+                child: const SaleNews(
+                  isListPost: true,
+                ),
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(

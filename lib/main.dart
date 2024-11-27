@@ -19,10 +19,9 @@ class MyApp extends StatelessWidget {
         title: "Trang cá nhân",
       ),
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
-        useMaterial3: true,
-        textTheme: TextTheme()
-      ),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+          useMaterial3: true,
+          textTheme: const TextTheme()),
     );
   }
 }
