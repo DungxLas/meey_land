@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         GoRoute(
           path: '/',
           builder: (context, state) => BlocProvider(
-            create: (context) => SaleNewCubit(),
+            create: (context) => SaleNewCubit()..onFetched(),
             child: const SalePage(
               title: "Trang cá nhân",
             ),

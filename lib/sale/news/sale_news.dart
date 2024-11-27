@@ -16,96 +16,100 @@ class SaleNews extends StatefulWidget {
 }
 
 class _SaleNewsState extends State<SaleNews> {
-  late var check = true;
+  late bool isBuying = true;
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<SaleNewCubit, SaleNewState>(
       builder: (context, state) {
-        List<Widget> content = !widget.isListPost
-            ? [
-                Image.asset(
-                  'lib/assets/images/16.png',
-                ),
-                const Text(
-                  "Chưa có tin đăng",
-                  style: TextStyle(
+        if (state.posts.isEmpty) {
+          return Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                widget.isListPost
+                    ? const CircularProgressIndicator()
+                    : Image.asset(
+                        'lib/assets/images/16.png',
+                        height: 150,
+                      ),
+                const SizedBox(height: 16),
+                Text(
+                  widget.isListPost
+                      ? "Đang tải dữ liệu..."
+                      : "Chưa có tin đăng",
+                  style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-              ]
-            : [
+              ],
+            ),
+          );
+        }
+
+        List<Widget> content = [
+          Container(
+            decoration: BoxDecoration(
+              color: const Color(0xFFF2F4F7),
+              borderRadius: BorderRadius.circular(4),
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: TextButton(
+                    onPressed: () {
+                      setState(() {
+                        isBuying = true;
+                      });
+                    },
+                    child: Text(
+                      'Mua bán (5)',
+                      style: TypeSet.sub14Medium.copyWith(
+                          color: isBuying
+                              ? const Color(0xFF1570EF)
+                              : const Color(0xFF475467)),
+                    ),
+                  ),
+                ),
                 Container(
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFF2F4F7),
-                    borderRadius: BorderRadius.circular(4),
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          TextButton(
-                            onPressed: () {
-                              setState(() {
-                                check = true;
-                              });
-                            },
-                            child: Text(
-                              'Mua bán (5)',
-                              style: TypeSet.sub14Medium.copyWith(
-                                  color:
-                                      Color(check ? 0xFF1570EF : 0xFF475467)),
-                            ),
-                          ),
-                          Container(
-                            width: 1,
-                            height: 30,
-                            color: Colors.white,
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              setState(() {
-                                check = false;
-                              });
-                            },
-                            child: Text(
-                              'Cho thuê (3)',
-                              style: TypeSet.sub14Medium.copyWith(
-                                  color:
-                                      Color(check ? 0xFF475467 : 0xFF1570EF)),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+                  width: 1,
+                  height: 30,
+                  color: Colors.white,
+                ),
+                Expanded(
+                  child: TextButton(
+                    onPressed: () {
+                      setState(() {
+                        isBuying = false;
+                      });
+                    },
+                    child: Text(
+                      'Cho thuê (3)',
+                      style: TypeSet.sub14Medium.copyWith(
+                          color: isBuying
+                              ? const Color(0xFF475467)
+                              : const Color(0xFF1570EF)),
+                    ),
                   ),
                 ),
-                const SizedBox(
-                  height: 16,
-                ),
-                ...(check ? state.posts : state.posts.reversed).map(
-                  (e) => PostCard(
-                    post: e,
-                  ),
-                ),
-              ];
+              ],
+            ),
+          ),
+          const SizedBox(height: 16),
+          ...state.posts.map((post) => PostCard(post: post)).toList(),
+        ];
 
         return Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              width: double.infinity,
-              child: Text(
-                "Tin đăng bất động sản",
-                style: TypeSet.sub16Medium,
-                textAlign: TextAlign.start,
-              ),
+            const Text(
+              "Tin đăng bất động sản",
+              style: TypeSet.sub16Medium,
+              textAlign: TextAlign.start,
             ),
-            const SizedBox(
-              height: 16,
-            ),
+            const SizedBox(height: 16),
             ...content,
           ],
         );
