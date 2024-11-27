@@ -38,6 +38,8 @@ dependencies:
 
   #  hiển thị thu gọn hoặc mở rộng text
   readmore: ^3.0.0
+  flutter_bloc: ^8.1.6
+  go_router: ^14.6.1
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +69,14 @@ flutter:
     - lib/assets/images/City_vector.png
     - lib/assets/images/16.png
     - lib/assets/images/trustworthiness.png
+    - lib/assets/images/Image1.png
+    - lib/assets/images/Image2.png
+    - lib/assets/images/Image3.png
+    - lib/assets/images/Image4.png
+    - lib/assets/images/Image5.png
+    - lib/assets/images/Image6.png
+    - lib/assets/images/Image7.png
+    - lib/assets/images/Image8.png
     - lib/assets/icons/Meeychat.png
     - lib/assets/icons/map.png
     - lib/assets/icons/Frame.png
