@@ -22,6 +22,32 @@ class _SaleNewsState extends State<SaleNews> {
   Widget build(BuildContext context) {
     return BlocBuilder<SaleNewCubit, SaleNewState>(
       builder: (context, state) {
+        if (state.posts.isEmpty) {
+          return Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                widget.isListPost
+                    ? const CircularProgressIndicator() // Hiển thị loading nếu có list
+                    : Image.asset(
+                        'lib/assets/images/16.png',
+                        height: 150,
+                      ),
+                const SizedBox(height: 16),
+                Text(
+                  widget.isListPost
+                      ? "Đang tải dữ liệu..."
+                      : "Chưa có tin đăng",
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ],
+            ),
+          );
+        }
+
         List<Widget> content = !widget.isListPost
             ? [
                 Image.asset(
