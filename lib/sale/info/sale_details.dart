@@ -31,7 +31,7 @@ class Saledetails extends StatelessWidget {
                 // left: 0,
                 // right: 0,
                 child: Image.asset(
-                  'lib/assets/images/City_vector.png',
+                  'assets/images/City_vector.png',
                   width: double.infinity,
                   fit: BoxFit.contain,
                 ),
@@ -40,7 +40,7 @@ class Saledetails extends StatelessWidget {
                 right: 0,
                 bottom: 0,
                 child: Image.asset(
-                  'lib/assets/icons/image_button.png',
+                  'assets/icons/image_button.png',
                   width: 32,
                   height: 32,
                 ),
@@ -112,7 +112,7 @@ class Saledetails extends StatelessWidget {
         ),
         Content(
           icon: Image.asset(
-            'lib/assets/icons/map.png',
+            'assets/icons/map.png',
             width: 24,
             height: 24,
             color: Colors.white,
@@ -126,7 +126,7 @@ class Saledetails extends StatelessWidget {
         ),
         Content(
           icon: Image.asset(
-            'lib/assets/icons/Frame.png',
+            'assets/icons/Frame.png',
             width: 24,
             height: 24,
             color: Colors.white,
@@ -139,7 +139,7 @@ class Saledetails extends StatelessWidget {
           ],
         ),
         Iconlabel(
-          iconPath: 'lib/assets/icons/chung_chi.png',
+          iconPath: 'assets/icons/chung_chi.png',
           sizeIcon: 24,
           label: Text(
             'Chứng chỉ môi giới',
@@ -150,7 +150,7 @@ class Saledetails extends StatelessWidget {
           height: 8,
         ),
         Iconlabel(
-          iconPath: 'lib/assets/icons/Check.png',
+          iconPath: 'assets/icons/Check.png',
           sizeIcon: 24,
           label: Text(
             'Chứng chỉ môi giới',
@@ -168,7 +168,7 @@ class Saledetails extends StatelessWidget {
         ),
         Content(
           icon: Image.asset(
-            'lib/assets/icons/youtube.png',
+            'assets/icons/youtube.png',
             width: 24,
             height: 24,
             //color: Colors.white,

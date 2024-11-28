@@ -8,7 +8,7 @@ final List<PostCardInfo> dummyData = [
       numBedRoom: '2',
       numBathRoom: '1',
       price: '2.3 ty',
-      image: 'lib/assets/images/Image1.png'),
+      image: 'assets/images/Image1.png'),
   PostCardInfo(
       text: 'Cần tiền bán gấp mảnh hoa hậu tại Chợ Mộc, Minh Quang',
       address: 'Q. Thanh Xuân, TP. Hà Nội',
@@ -16,7 +16,7 @@ final List<PostCardInfo> dummyData = [
       numBedRoom: '2',
       numBathRoom: '1',
       price: '2.3 ty',
-      image: 'lib/assets/images/Image2.png'),
+      image: 'assets/images/Image2.png'),
   PostCardInfo(
       text: 'Cần tiền bán gấp mảnh hoa hậu tại Chợ Mộc, Minh Quang',
       address: 'Q. Thanh Xuân, TP. Hà Nội',
@@ -24,7 +24,7 @@ final List<PostCardInfo> dummyData = [
       numBedRoom: '2',
       numBathRoom: '1',
       price: '2.3 ty',
-      image: 'lib/assets/images/Image3.png'),
+      image: 'assets/images/Image3.png'),
   PostCardInfo(
       text: 'Cần tiền bán gấp mảnh hoa hậu tại Chợ Mộc, Minh Quang',
       address: 'Q. Thanh Xuân, TP. Hà Nội',
@@ -32,7 +32,7 @@ final List<PostCardInfo> dummyData = [
       numBedRoom: '2',
       numBathRoom: '1',
       price: '2.3 ty',
-      image: 'lib/assets/images/Image4.png'),
+      image: 'assets/images/Image4.png'),
   PostCardInfo(
       text: 'Cần tiền bán gấp mảnh hoa hậu tại Chợ Mộc, Minh Quang',
       address: 'Q. Thanh Xuân, TP. Hà Nội',
@@ -40,7 +40,7 @@ final List<PostCardInfo> dummyData = [
       numBedRoom: '2',
       numBathRoom: '1',
       price: '2.3 ty',
-      image: 'lib/assets/images/Image5.png'),
+      image: 'assets/images/Image5.png'),
   PostCardInfo(
       text: 'Cần tiền bán gấp mảnh hoa hậu tại Chợ Mộc, Minh Quang',
       address: 'Q. Thanh Xuân, TP. Hà Nội',
@@ -48,7 +48,7 @@ final List<PostCardInfo> dummyData = [
       numBedRoom: '2',
       numBathRoom: '1',
       price: '2.3 ty',
-      image: 'lib/assets/images/Image6.png'),
+      image: 'assets/images/Image6.png'),
   PostCardInfo(
       text: 'Cần tiền bán gấp mảnh hoa hậu tại Chợ Mộc, Minh Quang',
       address: 'Q. Thanh Xuân, TP. Hà Nội',
@@ -56,7 +56,7 @@ final List<PostCardInfo> dummyData = [
       numBedRoom: '2',
       numBathRoom: '1',
       price: '2.3 ty',
-      image: 'lib/assets/images/Image7.png'),
+      image: 'assets/images/Image7.png'),
   PostCardInfo(
       text: 'Cần tiền bán gấp mảnh hoa hậu tại Chợ Mộc, Minh Quang',
       address: 'Q. Thanh Xuân, TP. Hà Nội',
@@ -64,5 +64,5 @@ final List<PostCardInfo> dummyData = [
       numBedRoom: '2',
       numBathRoom: '1',
       price: '2.3 ty',
-      image: 'lib/assets/images/Image8.png'),
+      image: 'assets/images/Image8.png'),
 ];

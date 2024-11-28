@@ -32,7 +32,7 @@ class SaleEdit extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 Image.asset(
-                  'lib/assets/images/trustworthiness.png',
+                  'assets/images/trustworthiness.png',
                   width: 65,
                   height: 65,
                 ),
@@ -78,7 +78,7 @@ class SaleEdit extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 Image.asset(
-                  'lib/assets/images/16.png',
+                  'assets/images/16.png',
                   width: 65,
                   height: 65,
                 ),

@@ -7,11 +7,11 @@ class SaleAuth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sale Auth')),
+      appBar: AppBar(title: const Text('Sale Auth')),
       body: Center(
         child: ElevatedButton(
           onPressed: () => context.go('/'),
-          child: Text('Go to SalePage'),
+          child: const Text('Go to SalePage'),
         ),
       ),
     );

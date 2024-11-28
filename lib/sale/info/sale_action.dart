@@ -55,7 +55,7 @@ class SaleAction extends StatelessWidget {
                 ),
               ),
               icon: Image.asset(
-                'lib/assets/icons/Meeychat.png',
+                'assets/icons/Meeychat.png',
                 width: 20,
                 height: 20,
               ),

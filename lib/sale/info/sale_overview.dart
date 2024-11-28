@@ -35,7 +35,7 @@ class SaleOverview extends StatelessWidget {
               right: 0,
               bottom: 0,
               child: Image.asset(
-                'lib/assets/icons/image_button.png',
+                'assets/icons/image_button.png',
                 width: 32,
                 height: 32,
               ),
@@ -71,7 +71,7 @@ class SaleOverview extends StatelessWidget {
                   vertical: 2,
                 ),
                 child: Iconlabel(
-                  iconPath: 'lib/assets/icons/star.png',
+                  iconPath: 'assets/icons/star.png',
                   sizeIcon: 24,
                   label: Text(
                     'Môi giới Chuyên nghiệp',

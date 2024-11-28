@@ -7,11 +7,11 @@ class CreatePost extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Create Post')),
+      appBar: AppBar(title: const Text('Create Post')),
       body: Center(
         child: ElevatedButton(
           onPressed: () => context.go('/'),
-          child: Text('Go to SalePage'),
+          child: const Text('Go to SalePage'),
         ),
       ),
     );

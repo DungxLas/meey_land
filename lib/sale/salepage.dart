@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:meey_land/cubit/sale_new_cubit.dart';
+import 'package:meey_land/cubit/sale_new_state.dart';
 import 'package:meey_land/sale/edit/sale_edit.dart';
 import 'package:meey_land/sale/info/sale_details.dart';
 import 'package:meey_land/sale/news/sale_news.dart';
@@ -45,52 +48,60 @@ class SalePage extends StatelessWidget {
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-              "lib/assets/images/Vector.png",
+              "assets/images/Vector.png",
             ),
             fit: BoxFit.fill,
           ),
         ),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Padding(
-                padding: EdgeInsets.fromLTRB(16, 16, 16, 32),
-                child: Saledetails(),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 16,
-                ),
-                child: SaleEdit(),
-              ),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(16),
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                ),
-                child: const SaleNews(
-                  isListPost: true,
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 44,
-                ),
-                child: SizedBox(
-                  width: double.infinity,
-                  child: Text(
-                    "Trang chủ / Hà Nội / Mua bán đất nền dự án",
-                    style: TextStyle(color: Colors.white),
-                    textAlign: TextAlign.start,
+        child: CustomScrollView(
+          slivers: [
+            SliverList(
+              delegate: SliverChildListDelegate(
+                [
+                  const Padding(
+                    padding: EdgeInsets.fromLTRB(16, 16, 16, 32),
+                    child: Saledetails(),
                   ),
-                ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 0,
+                      vertical: 16,
+                    ),
+                    child: SaleEdit(),
+                  ),
+                  BlocBuilder<SaleNewCubit, SaleNewState>(
+                    builder: (context, state) {
+                      return Container(
+                        width: double.infinity,
+                        height: 200 + state.posts.length * 120,
+                        padding: const EdgeInsets.all(16),
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                        ),
+                        child: SaleNews(
+                          posts: state.posts,
+                        ),
+                      );
+                    },
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 44,
+                    ),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: Text(
+                        "Trang chủ / Hà Nội / Mua bán đất nền dự án",
+                        style: TextStyle(color: Colors.white),
+                        textAlign: TextAlign.start,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

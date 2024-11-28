@@ -65,7 +65,7 @@ class PostCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Iconlabel(
-                      iconPath: 'lib/assets/icons/format_square.png',
+                      iconPath: 'assets/icons/format_square.png',
                       sizeIcon: 16,
                       label: Text(
                         '${post.square} m2',
@@ -76,7 +76,7 @@ class PostCard extends StatelessWidget {
                     ),
                     const SizedBox(width: 6),
                     Iconlabel(
-                      iconPath: 'lib/assets/icons/bed_single.png',
+                      iconPath: 'assets/icons/bed_single.png',
                       sizeIcon: 16,
                       label: Text(
                         post.numBedRoom,
@@ -87,7 +87,7 @@ class PostCard extends StatelessWidget {
                     ),
                     const SizedBox(width: 6),
                     Iconlabel(
-                      iconPath: 'lib/assets/icons/bathtub_01.png',
+                      iconPath: 'assets/icons/bathtub_01.png',
                       sizeIcon: 16,
                       label: Text(
                         post.numBathRoom,
